@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.siddharthgautam.csc301" >
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.nononsenseapps.filepicker.FilePickerActivity"
+            android:label="@string/app_name"
+            android:theme="@style/FilePickerTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".chatActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/AppTheme.NoActionBar" >
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity android:name=".StartScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contactsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_contacts"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".DisplayScreenActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_display_screen"
+            android:parentActivityName=".DisplayScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AllContactsFrag"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_all_contacts_frag"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".GroupFrag"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_group_frag"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".OpenChat"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_open_chat"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".OpenChatFrag"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_open_chat_frag"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".GroupChatActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_group_chat"
+            android:theme="@style/AppTheme.NoActionBar" >
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".SettingsFrag"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_settings_frag"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+    </application>
+
+</manifest>

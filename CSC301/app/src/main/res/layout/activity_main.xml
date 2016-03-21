@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" >
+
+        <Button
+        android:layout_width="1000px"
+        android:layout_height="wrap_content"
+        android:text="Scan for Devices"
+        android:onClick="show"
+        android:id="@+id/scanButton"
+        android:layout_marginTop="95dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+         android:layout_width="1000px"
+         android:layout_height="wrap_content"
+         android:text="Show Devices"
+         android:id="@+id/deviceList"
+         android:layout_below="@+id/scanButton"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="1000px"
+            android:layout_height="wrap_content"
+            android:text="Click to Chat"
+            android:onClick="startChat"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/deviceList"
+            android:id="@+id/button" />
+
+        <Button
+            android:layout_width="1000px"
+            android:layout_height="wrap_content"
+            android:text="Start Socket"
+            android:onClick="startSocket"
+            android:layout_below="@+id/button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/openMainButton" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:layout_below="@+id/openMainButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:choiceMode="singleChoice" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
